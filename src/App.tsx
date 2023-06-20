@@ -1,7 +1,7 @@
-import logo from './logo.svg'
-import './App.css'
+import logo from './logo.svg';
+import './App.css';
 
-function App (): JSX.Element {
+function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +19,7 @@ function App (): JSX.Element {
         </a>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
