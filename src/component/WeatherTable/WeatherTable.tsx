@@ -2,10 +2,10 @@ import { Box, Typography } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { useDemoData } from '@mui/x-data-grid-generator';
 
-import styles from './Weather.module.css';
+import styles from './WeatherTable.module.css';
 
 const VISIBLE_FIELDS = ['name', 'rating', 'country', 'dateCreated', 'isAdmin'];
-const Weather = () => {
+const WeatherTable = () => {
   const { data } = useDemoData({
     dataSet: 'Employee',
     visibleFields: VISIBLE_FIELDS,
@@ -21,4 +21,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default WeatherTable;
