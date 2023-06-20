@@ -13,7 +13,9 @@ const WeatherTable = () => {
   });
   return (
     <Box className={styles.weather__container}>
-        <Typography className={styles.weather__title}>Daily Temperature in 7 days</Typography>
+      <Typography className={styles.weather__title}>
+        Daily Temperature in 7 days
+      </Typography>
       <div style={{ height: '60%', width: '80%' }}>
         <DataGrid {...data} />
       </div>

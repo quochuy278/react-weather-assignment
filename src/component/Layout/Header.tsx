@@ -32,7 +32,7 @@ const navItems = [
 ];
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
-const Header = () => {
+const Header = (): JSX.Element => {
   const [selectedIndex, setSelectedIndex] = useState<number>(1);
   const [state, setState] = useState({
     left: false,
@@ -69,7 +69,10 @@ const Header = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem key={`Weather App`} className={styles.drawer__title__container}>
+        <ListItem
+          key={`Weather App`}
+          className={styles.drawer__title__container}
+        >
           <Typography className={styles.drawer__title}>Weather App</Typography>
         </ListItem>
         {navItems.map((item) => {
@@ -82,9 +85,9 @@ const Header = () => {
                 replace
               >
                 <ListItemButton
-                  onClick={(event) =>
-                    handleListItemClick(event, item.selectedIndex)
-                  }
+                  onClick={(event) => {
+                    handleListItemClick(event, item.selectedIndex);
+                  }}
                   selected={selectedIndex === item.selectedIndex}
                   className={
                     selectedIndex === item.selectedIndex
@@ -120,7 +123,7 @@ const Header = () => {
             </IconButton>
             <SwipeableDrawer
               anchor={'left'}
-              open={state['left']}
+              open={state.left}
               onClose={toggleDrawer('left', false)}
               onOpen={toggleDrawer('left', true)}
             >
