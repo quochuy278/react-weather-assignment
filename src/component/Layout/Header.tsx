@@ -18,16 +18,22 @@ import { Link } from 'react-router-dom';
 
 const navItems = [
   {
+    id: 0,
+    primaryText: 'Weather',
+    path: '/',
+    selectedIndex: 0,
+  },
+  {
     id: 1,
     primaryText: 'Weather chart',
     path: '/',
-    selectedIndex: 0,
+    selectedIndex: 1,
   },
   {
     id: 2,
     primaryText: 'Weather table',
     path: '/table',
-    selectedIndex: 1,
+    selectedIndex: 2,
   },
 ];
 
@@ -41,6 +47,7 @@ const Header = (): JSX.Element => {
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
+        // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
         event &&
         event.type === 'keydown' &&
         ((event as React.KeyboardEvent).key === 'Tab' ||
@@ -55,10 +62,10 @@ const Header = (): JSX.Element => {
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     index: number
-  ) => {
+  ): void => {
     setSelectedIndex(index);
   };
-  const list = (anchor: Anchor) => (
+  const list = (anchor: Anchor): JSX.Element => (
     <Box
       className={styles.drawer}
       sx={{
