@@ -1,40 +1,40 @@
 .nav__link__item {
-    text-decoration: none;
-    color: black;
-    width: 100%;
-    margin-left: 1rem;
-    position: relative;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  margin-left: 1rem;
+  position: relative;
 }
 
 .active {
-    background-color: #ffffff !important;
-    position: relative;
-    width: 95%;
-    border-radius: 0.6rem !important;
-    box-shadow: #e8eaee;
+  background-color: #ffffff !important;
+  position: relative;
+  width: 95%;
+  border-radius: 0.6rem !important;
+  box-shadow: #e8eaee;
 }
 
 .drawer {
-    background-color: #e8eaee !important;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #e8eaee !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.drawer__title__container{
-    justify-content: center !important;
-    align-items: center !important;
-    margin-bottom: 1rem;
+.drawer__title__container {
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 1rem;
 }
 
-.drawer__title{
-    text-align: center;
-    font-weight: 800 !important;
-    line-height: 1rem !important;
+.drawer__title {
+  text-align: center;
+  font-weight: 800 !important;
+  line-height: 1rem !important;
 }
 
-.list__item__text{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
-    line-height: 1rem !important;
+.list__item__text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  line-height: 1rem !important;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Error = () => {
+const Error = (): JSX.Element => {
   return <div>Error</div>;
 };
 
