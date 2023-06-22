@@ -46,7 +46,7 @@ const WeatherTable = (): JSX.Element => {
       setWeatherData(data);
     }
   }, [isSuccess, data]);
-  // console.log(weatherData?.daily);
+
   if (!weatherData) {
     return (
       <Box className={styles.weather__container}>
@@ -70,6 +70,7 @@ const WeatherTable = (): JSX.Element => {
             })}
           </TableRow>
         </TableHead>
+
         <TableBody>
           {Object.entries(data.daily).map(([key, values]) => {
             if (key === 'time') return null; // Skip 'time' key
