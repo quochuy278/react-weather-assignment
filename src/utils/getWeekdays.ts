@@ -1,21 +1,29 @@
 /* eslint-disable prettier/prettier */
 import moment from 'moment';
 
+/**
+ * The getWeekDays function retrieves an array of week day names starting from the current day. It uses the moment library to handle date and time operations.
+ *
+ * The function initializes an empty array called days. It then calculates the index of the current day in the week using moment().day(). The adjusted Monday index is calculated by adding 6 to the current index, taking the modulus of 7, and adding 1.
+ *
+ * A loop is used to iterate from 0 to 6 to get the next seven days. For each iteration, the function calculates the index of the next day by adding the adjusted Monday index and the current iteration index, taking the modulus of 7. It then uses moment().day(nextIndex) to get the corresponding day's name in the format 'dddd' (e.g., 'Monday', 'Tuesday'). The day name is pushed to the days array.
+ *
+ * Finally, the function returns the days array containing the week day names.
+ *
+ * @return  {string[]}[return description]
+ */
 function getWeekDays(): string[] {
   const days: string[] = [];
-  // Get the index of the current day in the week
-  const currentIndex = moment().day(); // 4
 
-  // Calculate the adjusted index for Monday
+  const currentIndex = moment().day();
+
   const adjustedMondayIndex = ((currentIndex + 6) % 7) + 1;
 
-  // Iterate from 0 to 6 to get the next seven days
   for (let i = 0; i < 7; i++) {
-    // Calculate the index of the next day based on the adjusted Monday index
     const nextIndex = (adjustedMondayIndex + i) % 7;
-    // Get the name of the next day based on the index
+
     const nextDay = moment().day(nextIndex).format('dddd');
-    // Push the next day to the result array
+
     days.push(nextDay);
   }
 

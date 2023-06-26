@@ -1,0 +1,21 @@
+.card_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather_card {
+  height: 30rem;
+  border-radius: 0.5rem !important;
+  background-color: rgb(136, 175, 175) !important;
+}
+
+.temperature {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}

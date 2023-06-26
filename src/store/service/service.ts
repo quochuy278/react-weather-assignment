@@ -15,8 +15,6 @@ export const weatherApi = createApi({
         url: `forecast?latitude=65.01&longitude=25.50${query}`,
       }),
       transformResponse: (response: any) => {
-        console.log(response);
-
         const chunkArray = (array: any[], chunkSize: number): any[] => {
           const chunks = [];
           for (let i = 0; i < array.length; i += chunkSize) {
@@ -49,7 +47,7 @@ export const weatherApi = createApi({
         const currentIndex = moment().weekday();
         const adjustedMondayIndex = (currentIndex + 6) % 7;
         const rearrangedDaily: unknown = {};
-        console.log(response);
+
         for (const key in response.daily) {
           rearrangedDaily[key] = [
             ...response.daily[key].slice(adjustedMondayIndex),

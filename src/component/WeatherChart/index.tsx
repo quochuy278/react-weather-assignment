@@ -1,28 +1,21 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-import {
-  Box,
-  CircularProgress,
-  Button,
-  Menu,
-  MenuItem,
-  Typography,
-} from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
-import { useFetchWeatherForcastHourlyQuery } from '../../store/service/service';
-import moment from 'moment';
+import { Box, Button, CircularProgress, Menu, MenuItem } from '@mui/material';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import styles from './WeatherChart.module.css';
-import { transformResponseKey } from '../../utils/transformResponseKeys';
+import moment from 'moment';
+import { useFetchWeatherForcastHourlyQuery } from '../../store/service/service';
+
 import accessibility from 'highcharts/modules/accessibility';
+import { transformResponseKey } from '../../utils/transformResponseKeys';
+import styles from './index.module.css';
 
 accessibility(Highcharts);
 
 const WeatherChart = (): JSX.Element => {
-  const chartRef = useRef(null);
   const [open, setOpen] = useState<boolean>(false);
   const [temperatureUnit, setTemperatureUnit] = useState<string>('fahrenheit');
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -41,7 +34,6 @@ const WeatherChart = (): JSX.Element => {
   }, [isSuccess, data]);
 
   if (!weatherData) {
-    console.log('is this runnig ?');
     return (
       <Box className={styles.weather__container}>
         <CircularProgress />
