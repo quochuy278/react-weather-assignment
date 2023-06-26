@@ -10,7 +10,7 @@ function transformResponseKey(key: string): string {
   // Replace underscores with spaces using regular expression
   const formattedKey = key
     .replace(/_/g, ' ')
-    .replace(/\b\w/g, (char) => char.toUpperCase());  // Capitalize the first letter of each word
+    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
 
   return formattedKey;
 }
