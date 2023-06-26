@@ -7,7 +7,7 @@ function getWeekDays(): string[] {
   const currentIndex = moment().day(); // 4
 
   // Calculate the adjusted index for Monday
-  const adjustedMondayIndex = ((currentIndex + 6) % 7) - 2;
+  const adjustedMondayIndex = ((currentIndex + 6) % 7) + 1;
 
   // Iterate from 0 to 6 to get the next seven days
   for (let i = 0; i < 7; i++) {

@@ -17,6 +17,13 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "flow"
+      }
+    ],
     "no-use-before-define": "off",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/no-floating-promises": "error",

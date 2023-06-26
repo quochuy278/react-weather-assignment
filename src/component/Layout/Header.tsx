@@ -26,7 +26,7 @@ const navItems = [
   {
     id: 1,
     primaryText: 'Weather chart',
-    path: '/',
+    path: '/chart',
     selectedIndex: 1,
   },
   {
