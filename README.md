@@ -36,7 +36,7 @@ Follow these instructions to set up and run the Weather App locally:
 
 - React: JavaScript library for building user interfaces.
 - Redux: JavaScript library for state management.
-- UserTK Query: Library for data fetching and caching.
+- Use RTK Query (Redux Toolkit Query): Library for data fetching and caching.
 - Highcharts: JavaScript charting library for data visualization.
 - HTML: Markup language for creating the structure of web pages.
 - CSS: Stylesheet language for designing the presentation of web pages.
