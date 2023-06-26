@@ -19,21 +19,15 @@ import { Link } from 'react-router-dom';
 const navItems = [
   {
     id: 0,
-    primaryText: 'Weather',
+    primaryText: 'Home',
     path: '/',
     selectedIndex: 0,
   },
   {
     id: 1,
-    primaryText: 'Weather chart',
-    path: '/chart',
+    primaryText: 'Weather',
+    path: '/weather',
     selectedIndex: 1,
-  },
-  {
-    id: 2,
-    primaryText: 'Weather table',
-    path: '/table',
-    selectedIndex: 2,
   },
 ];
 
