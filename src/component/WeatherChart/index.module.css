@@ -12,3 +12,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.unit_btn {
+  text-transform: capitalize !important;
+}

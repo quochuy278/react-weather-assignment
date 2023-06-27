@@ -33,7 +33,7 @@ const navItems = [
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 const Header = (): JSX.Element => {
-  const [selectedIndex, setSelectedIndex] = useState<number>(1);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [state, setState] = useState({
     left: false,
   });
@@ -120,7 +120,7 @@ const Header = (): JSX.Element => {
               sx={{ padding: 0 }}
               onClick={toggleDrawer('left', true)}
             >
-              <MenuIcon sx={{ color: '#000000' }} />
+              <MenuIcon sx={{ color: '#FFF' }} />
             </IconButton>
             <SwipeableDrawer
               anchor={'left'}

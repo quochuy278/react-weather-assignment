@@ -8,13 +8,14 @@ import {
   CircularProgress,
 } from '@mui/material';
 
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import styles from './index.module.css';
 import { useFetchWeatherForcastQuery } from '../../store/service/service';
 import {
   getValueAtIndex,
   getWeatherDescription,
+  getWeekDays,
   splitString,
 } from '../../utils';
 import moment from 'moment';
@@ -33,10 +34,8 @@ const TIMEZONE = 'Europe/Helsinki';
 
 const WeatherDetail = (): JSX.Element => {
   const param = useParams();
-  console.log(param);
   const paramValue = param.slug as string;
   const index = paramValue?.charAt(paramValue.length - 1);
-  console.log(index);
   const [weatherData, setWeatherData] = useState<any>(null);
   const { data, isSuccess } = useFetchWeatherForcastQuery(
     `&daily=${WEATHER_FIELDS.join(',')}&timezone=${TIMEZONE}`,
@@ -52,7 +51,6 @@ const WeatherDetail = (): JSX.Element => {
       });
     }
   }, [isSuccess, data]);
-  console.log(weatherData);
 
   if (!weatherData) {
     return (
@@ -67,7 +65,7 @@ const WeatherDetail = (): JSX.Element => {
         <Grid item xs={12} sm={6} md={4}>
           <Card className={styles.weather_card}>
             <CardHeader
-              title={splitString(paramValue)[0]}
+              title={splitString(paramValue)[0] || getWeekDays()[index]}
               sx={{ textAlign: 'center' }}
             />
             <CardContent>

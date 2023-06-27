@@ -11,7 +11,10 @@
  *
  * @return  {string[]}          An array containing the separate values.
  */
-function splitString(input: string): string[] {
+function splitString(input?: string): string[] {
+  if (!input) {
+    return [''];
+  }
   const parts = input.split('-'); // Split the input string by '/'
   const day = parts[0]; // Get the day part
   const number = parts[1]; // Get the number part

@@ -1,9 +1,7 @@
-import { type ReactNode } from 'react';
-import type React from 'react';
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 interface DynamicRendererProps {
-  render: () => ReactNode | ReactNode[];
+  render: () => React.ReactNode | React.ReactNode[];
 }
 
 /**
