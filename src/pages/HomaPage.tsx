@@ -1,7 +1,7 @@
 import React from 'react';
 import WeatherTable from '../component/WeatherTable';
 
-const HomaPage = () => {
+const HomaPage = (): JSX.Element => {
   return <WeatherTable />;
 };
 

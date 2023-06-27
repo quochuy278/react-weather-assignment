@@ -87,6 +87,7 @@ const WeatherChart = (): JSX.Element => {
     <Box>
       <Box className={styles.btn_container}>
         <Button
+          className={styles.unit_btn}
           variant="text"
           endIcon={open ? <KeyboardArrowUp /> : <KeyboardArrowDownIcon />}
           onClick={handleOpen}
