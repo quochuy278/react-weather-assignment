@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-
+import React from 'react';
 import Error from './component/Error/Error';
 
 import './App.css';
 import WeatherDetail from './component/WeatherDetail';
-import { HomaPage, WeatherPage } from './pages';
+import { ErrorPage, HomaPage, WeatherPage } from './pages';
 
 function App(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function App(): JSX.Element {
       <Route path="/" element={<HomaPage />} />
       <Route path="/weather" element={<WeatherPage />} />
       <Route path="/weather/:slug" element={<WeatherDetail />} />
-      <Route path="*" element={<Error />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }
